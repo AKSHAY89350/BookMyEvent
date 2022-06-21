@@ -1,20 +1,18 @@
 import './App.css';
 import Login from './LoginComponent/Login';
-
-import ReactDOM from 'react-dom';
-import { BrowserRouter, Route, Switch, Link } from 'react-router-dom';
-import React, { Component } from 'react'
+import React, { useState } from 'react'
 import DashBoard from './components/DashBoard';
-import Error1 from './LoginComponent/Error';
-class App extends Component{
-  
-  render(){
-    return (
-      <div>
-        <Login/>
-      </div>
-    ) 
-  }
-}
+
+const App = () => {
+  const [status, setStatus ] = useState('invalid');
+  const getStatus = (currentStatus) => {
+    setStatus(currentStatus);
+  };
+  return status === 'invalid' ? (
+    <Login getStatus = {getStatus}/>
+  ): (
+    <DashBoard getStatus ={getStatus} />
+  );
+};
 
 export default App;

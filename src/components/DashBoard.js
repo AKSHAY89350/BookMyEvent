@@ -45,7 +45,7 @@ class DashBoard extends Component {
                     </Switch>
                 </BrowserRouter>
             </div>
-        )
+        );
     }
 }
 export default DashBoard;

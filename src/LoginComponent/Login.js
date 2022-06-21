@@ -24,10 +24,15 @@ class Login extends Component {
         if (this.state.user.find(x => x.uname == uname && x.password == password)) {
             store.dispatch(login(uname));
             this.setState({ status: 'valid', class1: 'successClass', msg: "Successfully Login" });
+            this.props.getStatus('valid');
         }
         else {
             store.dispatch(logout());
-            this.setState({ status: 'invalid', class1: 'failureClass', msg: "Invalid User Name and Password" })
+            this.setState({ 
+                class1: 'failureClass',
+                msg: "Invalid User Name and Password" 
+            });
+            this.props.getStatus('invaild');
         }
        
         
@@ -48,7 +53,9 @@ class Login extends Component {
                             class="form-control" placeholder="Password" ref={this.password} />
                         </div>
                         <div class="col-auto">
-                        <button className="btn btn-primary mb-3" onClick={() => this.validation()}>Confirm identity</button>
+                        <button className="btn btn-primary mb-3" onClick={() => this.validation()}>
+                            Confirm identity
+                            </button>
                         {this.state.msg}    
                         </div>
                         </div>
