@@ -2,9 +2,7 @@ import React, { Component } from 'react'
 import Error1 from './Error';
 import Dashboard from '../components/DashBoard';
 import { store, login, logout } from "./Store";
-import { BrowserRouter, Route, Switch, Link } from 'react-router-dom';
-import Start from './start'
-import App from '../App';
+import Start from './start';
 class Login extends Component {
     uname = React.createRef();
     password = React.createRef();
@@ -28,41 +26,41 @@ class Login extends Component {
         }
         else {
             store.dispatch(logout());
-            this.setState({ 
+            this.setState({
                 class1: 'failureClass',
-                msg: "Invalid User Name and Password" 
+                msg: "Invalid User Name and Password"
             });
             this.props.getStatus('invaild');
         }
-       
-        
-        
+
+
+
     }
     render() {
         return (
             <div className={this.state.class1}  >
                 <div className='container'>
-                <h1 >Log in</h1>
-                <div className='row g-3'>
-                    
+                    <h1 >Log in</h1>
+                    <div className='row g-3'>
+
                         <div class="col-auto">
                             <input type="text" class="form-control" placeholder="User name" ref={this.uname} />
                         </div>
                         <div class="col-auto">
-                            <input type="password" 
-                            class="form-control" placeholder="Password" ref={this.password} />
+                            <input type="password"
+                                class="form-control" placeholder="Password" ref={this.password} />
                         </div>
                         <div class="col-auto">
-                        <button className="btn btn-primary mb-3" onClick={() => this.validation()}>
-                            Confirm identity
+                            <button className="btn btn-primary mb-3" onClick={() => this.validation()}>
+                                Confirm identity
                             </button>
-                        {this.state.msg}    
-                        </div>
+                            {this.state.msg}
                         </div>
                     </div>
+                </div>
                 {/* {this.state.status == 'valid' ? <Dashboard /> : <Error1 />}
                 */}
-                <Start status={this.state.status}/>
+                <Start status={this.state.status} />
             </div>
         )
     }

@@ -4,14 +4,14 @@ import React, { useState } from 'react'
 import DashBoard from './components/DashBoard';
 
 const App = () => {
-  const [status, setStatus ] = useState('invalid');
+  const [status, setStatus] = useState('invalid');
   const getStatus = (currentStatus) => {
     setStatus(currentStatus);
   };
   return status === 'invalid' ? (
-    <Login getStatus = {getStatus}/>
-  ): (
-    <DashBoard getStatus ={getStatus} />
+    <Login getStatus={getStatus} />
+  ) : (
+    <DashBoard getStatus={getStatus} />
   );
 };
 
