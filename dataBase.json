@@ -1,0 +1,28 @@
+{
+  "event": [
+    {
+      "id": 1001,
+      "eventName": "K.G.F – Chapter 2",
+      "Date": "09/09/2021",
+      "detail": "Dark, intense, and powerful, the poster has left the viewers excited and super soaked for the upcoming action drama. The new look of the actor has been receiving an overwhelming response from all across."
+    },
+    {
+      "id": 1002,
+      "eventName": "Avatar 2",
+      "Date": "17/12/2021",
+      "detail": "On the lush alien world of Pandora live the Na'vi, beings who appear primitive but are highly evolved. Because the planet's environment is poisonous, human/Na'vi hybrids, called Avatars, must link to human minds to allow for free movement on Pandora. Jake Sully, a paralyzed former Marine, becomes mobile again through one such Avatar and falls in love with a Na'vi woman."
+    },
+    {
+      "id": 1003,
+      "eventName": "Venom: Let There Be Carnage",
+      "Date": "02/07/2022",
+      "detail": "An investigative journalist who becomes the host of an alien symbiote, Venom, that imbues him with super-human abilities. Director Ruben Fleischer said that unlike a werewolf or Jekyll and Hyde, the relationship between Brock and the symbiote is a \"hybrid\", with the two characters sharing a body and working together."
+    },
+    {
+      "eventName": "Fast And Furious 9: The Fast Saga",
+      "Date": "03/09/2021",
+      "detail": "Fast And Furious 9: The Fast Saga starring Dwayne “The Rock” Johnson and Vin Diesel in lead roles has been one of the most-looked-forward-to films of the franchise. Under the banner of Universal Pictures.",
+      "id": 1004
+    }
+  ]
+}
